@@ -2,8 +2,6 @@
 import os
 
 
-
-
 def open_file(filename_param):
 
     dirname = os.path.dirname(__file__) # get the directory of the current file
@@ -23,14 +21,13 @@ def clean_data(data):
 
 
 def calc_safe_reports(reports):
-    previous_level = -1
-    direction = -1
-
-    num_safe = 0
-
+    
     report_safe = 0
 
     for list_of_levels in reports:
+        num_safe = 0
+        previous_level = -1
+        direction = -1
         for level in list_of_levels:
             if previous_level < 0:
                 previous_level = int(level)
@@ -50,7 +47,7 @@ def calc_safe_reports(reports):
                     previous_level = int(level)
         if num_safe == len(list_of_levels) -1:
             report_safe += 1
-    return num_safe
+    return report_safe
 
 
 
