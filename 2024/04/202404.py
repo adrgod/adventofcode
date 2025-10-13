@@ -1,6 +1,6 @@
 import os
 
-f = open('test_input.txt', 'r')
+f = open('input04.txt', 'r')
 data = f.read()
 
 find_word = 'XMAS'
